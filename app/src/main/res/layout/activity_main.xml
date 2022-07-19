@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipelayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            app:cardElevation="8dp">
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_view"
+                app:defaultQueryHint="Search News..."
+                app:iconifiedByDefault="false"
+                android:background="#7f7f7f"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+            </androidx.appcompat.widget.SearchView>
+        </androidx.cardview.widget.CardView>
+
+        <HorizontalScrollView
+            android:layout_margin="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/btnGeneralNews"
+                    android:text="General"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    style="@style/news_topic_button_style"/>
+                <Button
+                    android:id="@+id/btnBusinessNews"
+                    android:text="Business"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    style="@style/news_topic_button_style"/>
+                <Button
+                    android:id="@+id/btnEntertainmentNews"
+                    android:text="Entertainment"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    style="@style/news_topic_button_style"/>
+                <Button
+                    android:id="@+id/btnHealthNews"
+                    android:text="Health"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    style="@style/news_topic_button_style"/>
+                <Button
+                    android:id="@+id/btnScienceNews"
+                    android:text="Science"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    style="@style/news_topic_button_style"/>
+                <Button
+                    android:id="@+id/btnSportsNews"
+                    android:text="Sports"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    style="@style/news_topic_button_style"/>
+                <Button
+                    android:id="@+id/btnTechnologyNews"
+                    android:text="Technology"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    style="@style/news_topic_button_style"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
